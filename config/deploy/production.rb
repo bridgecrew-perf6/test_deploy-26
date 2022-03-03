@@ -1,4 +1,4 @@
-server "vpc-013a5dd3ac20cb37d", user: "ubuntu", roles: %w(web app db), primary: true
+server ENV['server'], user: ENV['user'], roles: %w(web app db), primary: true
 
 set :stage, :production
 set :rails_env, :production

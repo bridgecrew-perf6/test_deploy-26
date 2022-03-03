@@ -12,7 +12,7 @@ app_dir = File.expand_path("../..", __FILE__)
 environment "production"
 
 bind "unix:///home/viet_deploy/deploy/apps/shared/tmp/sockets/puma.sock"
-pidfile '/home/viet_deploy/deploy/apps/shared/tmp/pids/puma.pid'  
+pidfile '/home/viet_deploy/deploy/apps/shared/tmp/pids/puma.pid'
 state_path '/home/viet_deploy/deploy/apps/shared/tmp/pids/puma.state'
 workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 
