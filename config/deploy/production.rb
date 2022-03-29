@@ -1,8 +1,10 @@
-server ENV['server'], user: ENV['user'], roles: %w(web app db), primary: true
+# frozen_string_literal: true
+
+server '65.2.126.107', user: 'ubuntu', roles: %w[web app db], primary: true
 
 set :stage, :production
 set :rails_env, :production
-set :deploy_to, "/home/viet_deploy/deploy/apps/"
+set :deploy_to, '/home/viet_deploy/deploy/apps/'
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
 # server-based syntax
 # ======================
@@ -12,8 +14,6 @@ set :branch, ENV['BRANCH'] if ENV['BRANCH']
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-
-
 
 # role-based syntax
 # ==================
@@ -27,8 +27,6 @@ set :branch, ENV['BRANCH'] if ENV['BRANCH']
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -36,8 +34,6 @@ set :branch, ENV['BRANCH'] if ENV['BRANCH']
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================
